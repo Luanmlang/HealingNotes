@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volunteer Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Volunteer Hours Tracker</h1>
+    
+    <button id="google-signin">Sign in with Google</button>
+    <button id="signout" style="display:none;">Sign Out</button>
+    <p id="user-info"></p>
+
+    <form id="hours-form" style="display:none;">
+      <input type="date" id="date" required />
+      <input type="text" id="desc" placeholder="Activity Description" required />
+      <input type="number" id="hours" placeholder="Hours" required />
+      <button type="submit">Submit Hours</button>
+    </form>
+    
+    <div id="log"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
